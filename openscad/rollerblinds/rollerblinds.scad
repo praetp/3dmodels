@@ -14,24 +14,35 @@ difference() {
             ring(h=1,od=53); //widest ring
         }
         difference() {
-            ring(h=37,od=34,id=27); 
+            ring(h=40,od=34,id=28); 
             translate([0,0,1]) {
                 //outer omissions
-                rotate(degrees_per_cutout+15) linear_extrude(37) arc(a=55, r1=15, r2=18);
-                rotate(180+degrees_per_cutout+15) linear_extrude(37) arc(a=55, r1=15, r2=18);
+                rotate(degrees_per_cutout+15) linear_extrude(40) arc(a=55, r1=15, r2=18);
+                rotate(180+degrees_per_cutout+15) linear_extrude(40) arc(a=55, r1=15, r2=18);
 
             }
         }     
         //outer extensions
-        rotate(0) linear_extrude(37) arc(a=2, r1=16, r2=20);
-        rotate(15) linear_extrude(37) arc(a=2, r1=16, r2=20);
-        rotate(180) linear_extrude(37) arc(a=2, r1=16, r2=20);
-        rotate(180-15) linear_extrude(37) arc(a=2, r1=16, r2=20);
+        rotate(0) linear_extrude(40) arc(a=2, r1=16, r2=19.5);
+        rotate(15) linear_extrude(40) arc(a=2, r1=16, r2=19.5);
+        rotate(180) linear_extrude(40) arc(a=2, r1=16, r2=19.5);
+        rotate(180-15) linear_extrude(40) arc(a=2, r1=16, r2=19.5);
         
-        rotate(-60+0) linear_extrude(37) arc(a=2, r1=16, r2=20);
-        rotate(-60+15) linear_extrude(37) arc(a=2, r1=16, r2=20);
-        rotate(-60+180) linear_extrude(37) arc(a=2, r1=16, r2=20);
-        rotate(-60+180-15) linear_extrude(37) arc(a=2, r1=16, r2=20);
+        rotate(-60+0) linear_extrude(40) arc(a=2, r1=16, r2=19.5);
+        rotate(-60+15) linear_extrude(40) arc(a=2, r1=16, r2=19.5);
+        rotate(-60+180) linear_extrude(40) arc(a=2, r1=16, r2=19.5);
+        rotate(-60+180-15) linear_extrude(40) arc(a=2, r1=16, r2=19.5);
+        
+        translate([0,0,40]) {
+            difference() {
+                cylinder(10,14.5, 11);
+                 translate([0,0,-1]) {
+                    cylinder(12,13, 10);
+                 }
+
+            }
+        
+        }
 
     }
     translate([0,0,-1]) {
@@ -41,8 +52,8 @@ difference() {
         
         rotate(180) linear_extrude(30) arc(a=0+degrees_per_cutout+15, r1=13, r2=16);
         rotate(180+7*degrees_per_cutout) linear_extrude(30) arc(a=0+degrees_per_cutout+15, r1=13, r2=16);
-
     }
+   
 }
 
 
