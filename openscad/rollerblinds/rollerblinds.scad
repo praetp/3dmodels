@@ -14,7 +14,7 @@ difference() {
             ring(h=1,od=53); //widest ring
         }
         difference() {
-            ring(h=40,od=34,id=28); 
+            ring(h=40,od=34,id=27); 
             translate([0,0,1]) {
                 //outer omissions
                 rotate(degrees_per_cutout+15) linear_extrude(40) arc(a=55, r1=15, r2=18);
@@ -35,13 +35,12 @@ difference() {
         
         translate([0,0,40]) {
             difference() {
-                cylinder(10,14.5, 11);
+                cylinder(15,14.5, 10);
                  translate([0,0,-1]) {
-                    cylinder(12,13, 10);
+                    cylinder(17,13, 9);
                  }
 
             }
-        
         }
 
     }
